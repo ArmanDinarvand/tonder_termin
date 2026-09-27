@@ -1,0 +1,407 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>Wedding appointment - Test page</title>
+<style>
+*{box-sizing:border-box}body{margin:0;color:#292929;background:white;font:16px Arial,sans-serif}header{height:80px;border-bottom:1px solid #ddd;display:flex;align-items:center;justify-content:space-between;padding:0 5%}header img{height:40px;max-width:65%;object-fit:contain}.test{background:#fff4d9;padding:10px 5%;font-size:13px;color:#664b0d}.layout{max-width:1180px;margin:24px auto;padding:0 28px;display:grid;grid-template-columns:minmax(0,680px) minmax(260px,1fr);gap:48px}h1{font-size:25px;font-weight:400;line-height:1.5;margin:0 0 22px}h2{font-size:20px;font-weight:500;margin:0 0 16px}.section>br{display:none}.section{margin-bottom:22px}.position-absolute{float:left;margin-right:6px}.ml-2{font-size:14px}.mdc-text-field{display:flex;flex-direction:column;gap:8px}.mdc-floating-label{font-size:15px}.mdc-notched-outline__notch{width:auto!important}input,textarea,select{font:inherit;border:1px solid #888;border-radius:4px;padding:14px;width:100%;background:white;color:#292929}input:focus,textarea:focus,select:focus{outline:2px solid #315b49;outline-offset:1px}textarea{min-height:100px;resize:vertical}.control-label{display:block;margin-bottom:8px}.phone-row{display:flex;gap:8px}.phone-row select{width:120px}.phone-row input{min-width:0;flex:1}.additional-info{font:600 14px Arial;margin:26px 0 4px;letter-spacing:1px}.mdc-layout-grid__cell>br{display:none}button{font:600 15px Arial;padding:15px 30px;border:0;border-radius:4px;background:#315b49;color:#fff;cursor:pointer}button:hover{background:#234535}button:focus-visible{outline:3px solid #bc8c23;outline-offset:3px}aside{align-self:start;position:sticky;top:24px;border:1px solid #ddd;background:#f7f8f7;padding:25px;border-radius:4px}aside p{font-size:14px;color:#626862;line-height:1.6}dl{margin:0}dt{font-size:12px;color:#626862;margin-top:17px}dd{margin:5px 0 0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px}.success{border:1px solid #8bb298;background:#edf7ef;padding:22px;margin-bottom:24px;border-radius:4px}.success h2{color:#24533a;line-height:1.4}.success p{margin-bottom:0;font-size:14px;line-height:1.6}[hidden]{display:none!important}@media(max-width:760px){.layout{grid-template-columns:1fr;padding:0 20px;gap:24px}aside{position:static}h1{font-size:22px}header{padding:0 20px}}
+</style></head><body><header><img src="data:image/png;base64,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" alt="Tonder Kommune"><span>English</span></header><div class="test">TEST PAGE - No real reservation will be made.</div><main class="layout"><div><section id="confirmation" class="success" role="status" tabindex="-1" hidden><h2>Your appointment has been booked successfully.</h2><p>Thursday, November 5, 2026 at 10:15 a.m.</p><p>This is a test confirmation. No actual appointment has been booked.</p></section><form id="mainForm" onsubmit="return false">
+
+	
+
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section">
+	<br>
+	<h1>Time: Thursday November 5ᵗʰ, 2026 at 10:15 a.m.</h1>
+	<br>
+</div>
+
+
+
+
+<div class="mdc-layout-grid__inner">
+	<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
+		
+
+
+						
+
+
+<div class="section">
+	<div class="position-absolute">
+		
+	<span style="color:red">*</span>
+
+	</div>
+	<div class="ml-2">
+		Field is mandatory
+	</div>
+</div>
+
+				
+
+
+
+
+<div class="section">
+	<label class="control-label" for="telephone">
+		Mobile phone number (please enter without dashes)
+		
+
+	</label>
+	<div class="phone-row"><select id="dialCode" aria-label="Country calling code"><option value="+45">DK +45</option><option value="+49">DE +49</option></select><input name="PhoneNumber" id="telephone" class="contact-field reservation-text-field" maxlength="12" type="tel" inputmode="tel" aria-required="false" data-val="true" value="" autocomplete="tel-national" novalidate="novalidate" ></div>
+	
+	
+	<span class="text-danger field-validation-valid" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span>
+</div>
+
+					<br>
+				
+
+	
+
+				
+
+	
+	<div class="section">
+		<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+			<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+				<span class="mdc-notched-outline__leading"></span>
+				<span class="mdc-notched-outline__notch">
+					<span class="mdc-floating-label" id="email-lbl" style="">
+						Email address:
+						
+	<span style="color:red">*</span>
+
+					</span>
+				</span>
+				<span class="mdc-notched-outline__trailing"></span>
+			</span>
+			<input type="email" class="mdc-text-field__input contact-field reservation-text-field" id="email" name="Email" inputmode="email" data-val="true" aria-required="true" data-val-email="Please enter a correct email format" data-val-regex="Please enter a correct email format" data-val-regex-pattern="^[a-zA-Z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" autocomplete="email" data-val-required="This is a mandatory field" aria-labelledby="email-lbl" novalidate="novalidate">		</label>
+		<br>
+		<span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+	</div>
+
+					<br>
+				
+
+	
+
+				
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12433-lbl" style="">
+									Case Number (Sagsnummer)
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12433" type="text" name="field12433" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12433-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12433helper-text field12433-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12433" data-valmsg-replace="true"></span>					<pre id="field12433helper-text" class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent additional-info">PART 1</pre>
+
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12508-lbl" style="">
+									First name
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12508" type="text" name="field12508" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12508-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12508helper-text field12508-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12508" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field11321-lbl" style="">
+									Last name
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field11321" type="text" name="field11321" class="mdc-text-field__input reservation-text-field" aria-labelledby="field11321-lbl" aria-required="true" data-val="true" value="" aria-describedby="field11321helper-text field11321-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field11321" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field mdc-text-field--label-floating mdc-text-field--focused">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded mdc-notched-outline--notched">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0" style="width: 84.5px;">
+								<span class="reservation-field-name mdc-floating-label mdc-floating-label--float-above" id="field12539-lbl" style="">
+									Date of Birth
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12539" type="text" name="field12539" class="mdc-text-field__input reservation-text-field valid" aria-labelledby="field12539-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12539helper-text field12539-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12539" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+
+					<label class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea mdc-text-field--no-label fd-textarea-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field11295-lbl" style="">
+									Adress
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<span class="mdc-text-field__resizer">
+							<textarea id="field11295" name="field11295" aria-labelledby="field11295-lbl" data-val="true" class="mdc-text-field__input reservation-text-field" aria-describedby="field11295helper-text field11295-error" aria-required="true" aria-invalid="false" data-val-required="Field is required"></textarea>
+						</span>
+					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field11295" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12499-lbl" style="">
+									E-mail
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12499" type="text" name="field12499" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12499-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12499helper-text field12499-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12499" data-valmsg-replace="true"></span>					<pre id="field12499helper-text" class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent additional-info">PART 2</pre>
+
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12537-lbl" style="">
+									First Name
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12537" type="text" name="field12537" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12537-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12537helper-text field12537-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12537" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12538-lbl" style="">
+									Last name
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12538" type="text" name="field12538" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12538-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12538helper-text field12538-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12538" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0" style="">
+								<span class="reservation-field-name mdc-floating-label" id="field12540-lbl" style="">
+									Date of Birth
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12540" type="text" name="field12540" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12540-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12540helper-text field12540-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12540" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12510-lbl" style="">
+									Adress
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12510" type="text" name="field12510" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12510-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12510helper-text field12510-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12510" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12541-lbl" style="">
+									E-mail 
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12541" type="text" name="field12541" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12541-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12541helper-text field12541-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12541" data-valmsg-replace="true"></span>
+	</div>
+
+
+
+
+				
+
+
+
+				
+
+
+
+				
+
+
+
+				
+
+
+
+				
+
+
+<div class="section with-top-margin">
+
+	<button type="button" id="submit-btn" class="mdc-button mdc-button--unelevated submit-button with-loading mdc-ripple-upgraded" color="warn">
+		<span class="mdc-button__ripple"></span>
+		Confirm
+	</button>
+
+</div>
+
+
+
+
+	</div>
+
+	
+	
+</div>
+
+
+
+
+</form></div><aside><h2>Your details</h2><p>Your entries appear here as you fill in the form.</p><dl id="details"></dl></aside></main>
+<script>
+const form=document.getElementById('mainForm');
+const fields=[['telephone','Mobile phone number'],['email','Email address'],['field12433','Case number'],['field12508','Part 1 - First name'],['field11321','Part 1 - Last name'],['field12539','Part 1 - Date of birth'],['field11295','Part 1 - Address'],['field12499','Part 1 - Email'],['field12537','Part 2 - First name'],['field12538','Part 2 - Last name'],['field12540','Part 2 - Date of birth'],['field12510','Part 2 - Address'],['field12541','Part 2 - Email']];
+const details=document.getElementById('details');
+function updateDetails(){details.replaceChildren();for(const [id,label] of fields){const term=document.createElement('dt');term.textContent=label;const value=document.createElement('dd');const input=document.getElementById(id);value.textContent=input.value.trim()?(id==='telephone'?document.getElementById('dialCode').value+' ':'')+input.value.trim():'--';details.append(term,value);}}
+form.addEventListener('submit',event=>event.preventDefault());
+form.addEventListener('input',()=>{updateDetails();document.getElementById('confirmation').hidden=true;});
+form.addEventListener('change',updateDetails);
+document.getElementById('submit-btn').addEventListener('click',()=>{updateDetails();const message=document.getElementById('confirmation');message.hidden=false;message.focus();message.scrollIntoView({behavior:'smooth',block:'start'});});
+updateDetails();
+</script><script src="logic.js"></script><script src="contact.js"></script></body></html>
