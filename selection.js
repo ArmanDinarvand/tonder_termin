@@ -17,9 +17,15 @@ function draw(){
  tick();
 }
 function tick(){
+ state=BookingTest.read();
  const now=Date.now(),phase=BookingTest.phase(state,now);
- for(const button of document.querySelectorAll('.slots button'))button.disabled=!BookingTest.canSelect(state,button.dataset.date,button.dataset.time,now);
- for(const day of document.querySelectorAll('.appointment-day')){const available=!!day.querySelector('button:not(:disabled)');const label=day.querySelector('.availability');label.className=available?'availability available':'availability warning';label.textContent=available?'Available':phase==='expired'||phase==='booked'||phase==='open'?'⚠ No more available time slots':'⚠ Not open for booking';}
- byId('status').textContent=phase==='booked'?'Your appointment has already been booked.':'';
+ for(const button of document.querySelectorAll('.slots button')){const disabled=!BookingTest.canSelect(state,button.dataset.date,button.dataset.time,now);if(button.disabled!==disabled)button.disabled=disabled;}
+ for(const day of document.querySelectorAll('.appointment-day')){const available=!!day.querySelector('button:not(:disabled)');const label=day.querySelector('.availability');const className=available?'availability available':'availability warning';const text=available?'Available':phase==='expired'||phase==='booked'||phase==='open'?'⚠ No more available time slots':'⚠ Not open for booking';if(label.className!==className)label.className=className;if(label.textContent!==text)label.textContent=text;}
+ const status=phase==='booked'?'Your appointment has already been booked.':'';if(byId('status').textContent!==status)byId('status').textContent=status;
 }
 window.addEventListener('pageshow',()=>{state=BookingTest.read();draw();});draw();
+
+window.addEventListener('storage',event=>{if(event.key===BookingTest.key+'-schedule'||event.key===null)tick();});
+window.addEventListener('focus',tick);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick();});
+setInterval(tick,250);
