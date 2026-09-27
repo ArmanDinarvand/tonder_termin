@@ -1,0 +1,553 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; script-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="./ContactInfo_files/fontawesome.all.min.css" rel="stylesheet">
+
+
+
+	<link rel="stylesheet" href="./ContactInfo_files/bootstrap.min.css">
+	<link rel="stylesheet" href="./ContactInfo_files/font-awesome.min.css">
+	<link rel="stylesheet" href="./ContactInfo_files/intlTelInput.min.css">
+
+
+<link rel="stylesheet" href="./ContactInfo_files/bundle.css">
+
+	<title>Contact information – separate preview</title>
+<style name="nordpass-fonts">@font-face{font-family:Inter;src:url("chrome-extension://eiaeiblijfjekdanodkjadfinkhbfgcd/assets/font-c9407645.woff2")format("woff2");font-weight:400 700;font-style:normal;font-display:swap;unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Inter;src:url("chrome-extension://eiaeiblijfjekdanodkjadfinkhbfgcd/assets/font-a28eb6d3.woff2")format("woff2");font-weight:400 700;font-style:normal;font-display:swap;unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Inter;src:url("chrome-extension://eiaeiblijfjekdanodkjadfinkhbfgcd/assets/font-7ddd9658.woff2")format("woff2");font-weight:400 700;font-style:italic;font-display:swap;unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Inter;src:url("chrome-extension://eiaeiblijfjekdanodkjadfinkhbfgcd/assets/font-e3f94a6c.woff2")format("woff2");font-weight:400 700;font-style:italic;font-display:swap;unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Roboto Mono;src:url("chrome-extension://eiaeiblijfjekdanodkjadfinkhbfgcd/assets/font-2ed6ac9e.woff2")format("woff2");font-weight:500 700;font-style:normal;font-display:swap;unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Roboto Mono;src:url("chrome-extension://eiaeiblijfjekdanodkjadfinkhbfgcd/assets/font-2cb74c78.woff2")format("woff2");font-weight:500 700;font-style:normal;font-display:swap;unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}</style></head>
+<body class="mdc-typography"><p style="padding: 16px; background: rgb(255, 244, 217); color: rgb(34, 34, 34);">TEST PREVIEW — No real booking. Confirm only checks this form.</p>
+	<div class="mdc-drawer-app-content wrapper">
+		
+
+
+		<header class="mdc-top-app-bar mdc-top-app-bar">
+			
+
+<div class="mdc-top-app-bar__row">
+	<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+				
+
+
+
+<a class="navbar-brand d-flex align-items-center">
+	<img class="logo" alt="Back to start" height="40" src="./ContactInfo_files/logo.png">
+</a>
+
+				<span class="mdc-top-app-bar__title"></span>
+	</section>
+	<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+		
+	<div id="fd-language-select" class="mdc-select mdc-select--filled mdc-select--no-label fd-select">
+		<div class="mdc-select__anchor mdc-ripple-upgraded" tabindex="0" aria-disabled="false">
+			<span class="mdc-select__ripple"></span>
+			<span class="mdc-select__selected-text-container">
+				<span class="mdc-select__selected-text">English</span>
+			</span>
+			<span class="mdc-select__dropdown-icon">
+				<svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+					<polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10">
+					</polygon>
+					<polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15">
+					</polygon>
+				</svg>
+			</span>
+			<span class="mdc-line-ripple"></span>
+		</div>
+
+		<div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+			<ul class="mdc-list">
+					<li class="mdc-list-item mdc-list-item--selected" data-value="/toender/vielse/Home/Index?pageId=8d47364a-5e21-4e40-892d-e9f46878e18b&amp;culture=en&amp;uiculture=en" aria-selected="aria-selected" tabindex="-1">
+
+							<span class="iti-flag gb" style="display:inline-block"></span>
+						<span class="mdc-list-item__ripple"></span>
+						<span class="mdc-list-item__text">English</span>
+					</li>
+					<li class="mdc-list-item " data-value="/toender/vielse/Home/Index?pageId=d3812d00-82e4-4317-9ab1-b591228da501&amp;culture=de&amp;uiculture=de" tabindex="-1">
+
+							<span class="iti-flag de" style="display:inline-block"></span>
+						<span class="mdc-list-item__ripple"></span>
+						<span class="mdc-list-item__text">Deutsch</span>
+					</li>
+			</ul>
+		</div>
+	</div>
+
+	</section>
+</div>
+
+		</header>
+		<main class="main-content">
+			<div class="mdc-top-app-bar"></div>
+			<div class="mdc-layout-grid fd-layout-grid">
+				
+
+				<div class="body-layout">
+
+<form id="mainForm" novalidate="novalidate">
+
+	
+
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section">
+	<br>
+	<h1>Time: Thursday November 5ᵗʰ, 2026 at 10:15 a.m.</h1>
+	<br>
+</div>
+
+
+
+
+<div class="mdc-layout-grid__inner">
+	<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
+		
+
+
+						
+
+
+<div class="section">
+	<div class="position-absolute">
+		
+	<span style="color:red">*</span>
+
+	</div>
+	<div class="ml-2">
+		Field is mandatory
+	</div>
+</div>
+
+				
+
+
+
+
+<div class="section">
+	<label class="control-label" for="telephone">
+		Mobile phone number (please enter without dashes)
+		
+
+	</label>
+	<select id="dialCode" aria-label="Country calling code"><option value="+45">Denmark +45</option><option value="+49">Germany +49</option></select><input name="PhoneNumber" id="telephone" class="contact-field reservation-text-field" maxlength="12" type="tel" inputmode="tel" aria-required="false" data-val="true" value="" autocomplete="tel-national" novalidate="novalidate" style="padding-left: 84px;">
+	
+	
+	<span class="text-danger field-validation-valid" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span>
+</div>
+
+					<br>
+				
+
+	
+
+				
+
+	
+	<div class="section">
+		<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+			<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+				<span class="mdc-notched-outline__leading"></span>
+				<span class="mdc-notched-outline__notch">
+					<span class="mdc-floating-label" id="email-lbl" style="">
+						Email address:
+						
+	<span style="color:red">*</span>
+
+					</span>
+				</span>
+				<span class="mdc-notched-outline__trailing"></span>
+			</span>
+			<input type="email" class="mdc-text-field__input contact-field reservation-text-field" id="email" name="Email" inputmode="email" data-val="true" aria-required="true" data-val-email="Please enter a correct email format" data-val-regex="Please enter a correct email format" data-val-regex-pattern="^[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" autocomplete="email" data-val-required="This is a mandatory field" aria-labelledby="email-lbl" novalidate="novalidate" value="">		</label>
+		<br>
+		<span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+	</div>
+
+					<br>
+				
+
+	
+
+				
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12433-lbl" style="">
+									Case Number (Sagsnummer)
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12433" type="text" name="field12433" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12433-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12433helper-text field12433-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12433" data-valmsg-replace="true"></span>					<pre id="field12433helper-text" class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent additional-info">PART 1</pre>
+
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12508-lbl" style="">
+									First name
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12508" type="text" name="field12508" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12508-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12508helper-text field12508-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12508" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field11321-lbl" style="">
+									Last name
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field11321" type="text" name="field11321" class="mdc-text-field__input reservation-text-field" aria-labelledby="field11321-lbl" aria-required="true" data-val="true" value="" aria-describedby="field11321helper-text field11321-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field11321" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field mdc-text-field--label-floating mdc-text-field--focused">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded mdc-notched-outline--notched">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0" style="width: 84.5px;">
+								<span class="reservation-field-name mdc-floating-label mdc-floating-label--float-above" id="field12539-lbl" style="">
+									Date of Birth
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12539" type="text" name="field12539" class="mdc-text-field__input reservation-text-field valid" aria-labelledby="field12539-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12539helper-text field12539-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12539" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+
+					<label class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea mdc-text-field--no-label fd-textarea-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field11295-lbl" style="">
+									Adress
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<span class="mdc-text-field__resizer">
+							<textarea id="field11295" name="field11295" aria-labelledby="field11295-lbl" data-val="true" class="mdc-text-field__input reservation-text-field" aria-describedby="field11295helper-text field11295-error" aria-required="true" aria-invalid="false" data-val-required="Field is required"></textarea>
+						</span>
+					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field11295" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12499-lbl" style="">
+									E-mail
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12499" type="text" name="field12499" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12499-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12499helper-text field12499-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12499" data-valmsg-replace="true"></span>					<pre id="field12499helper-text" class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent additional-info">PART 2</pre>
+
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12537-lbl" style="">
+									First Name
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12537" type="text" name="field12537" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12537-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12537helper-text field12537-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12537" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12538-lbl" style="">
+									Last name
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12538" type="text" name="field12538" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12538-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12538helper-text field12538-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12538" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0" style="">
+								<span class="reservation-field-name mdc-floating-label" id="field12540-lbl" style="">
+									Date of Birth
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12540" type="text" name="field12540" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12540-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12540helper-text field12540-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12540" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12510-lbl" style="">
+									Adress
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12510" type="text" name="field12510" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12510-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12510helper-text field12510-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12510" data-valmsg-replace="true"></span>
+	</div>
+	
+	<div class="section section-with-bottom-margin">
+				<div>
+					<label class="mdc-text-field mdc-text-field--outlined fd-text-field">
+						<span class="mdc-notched-outline mdc-notched-outline--upgraded">
+							<span class="mdc-notched-outline__leading"></span>
+							<span class="mdc-notched-outline__notch pr-0">
+								<span class="reservation-field-name mdc-floating-label" id="field12541-lbl" style="">
+									E-mail 
+									
+	<span style="color:red">*</span>
+
+								</span>
+							</span>
+							<span class="mdc-notched-outline__trailing"></span>
+						</span>
+
+
+						<input id="field12541" type="text" name="field12541" class="mdc-text-field__input reservation-text-field" aria-labelledby="field12541-lbl" aria-required="true" data-val="true" value="" aria-describedby="field12541helper-text field12541-error" aria-invalid="false" data-val-required="Field is required">					</label>
+				</div>
+<span class="text-danger field-validation-valid" data-valmsg-for="field12541" data-valmsg-replace="true"></span>
+	</div>
+
+
+
+
+				
+
+
+
+				
+
+
+
+				
+
+
+
+				
+
+
+
+				
+
+
+<div class="section with-top-margin">
+
+	<button id="submit-btn" class="mdc-button mdc-button--unelevated submit-button with-loading mdc-ripple-upgraded" color="warn">
+		<span class="mdc-button__ripple"></span>
+		Confirm
+	</button>
+
+</div>
+
+
+
+
+	</div>
+
+	
+	
+</div>
+
+
+
+
+<p id="preview-status" role="status"></p></form>
+
+
+
+
+<div id="tab-validation-error" class="d-none">
+	<div class="alert alert-danger" role="alert">An error occurred</div>
+	<div>It appears that you have attempted to make reservations in multiple browser tabs at the same time. 
+It is not supported and may lead to errors.
+We recommend that you close all these tabs and start the booking flow again.</div>
+</div>
+
+
+
+</div>
+			</div>
+		</main>
+		
+
+	</div>
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+	
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+		
+
+
+
+<div role="status" aria-live="polite" aria-atomic="true" style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0px; border: 0px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); white-space: nowrap;"></div><div role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0px; border: 0px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); white-space: nowrap;"></div><script src="contact-preview.js"></script></body></html>
