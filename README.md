@@ -83,3 +83,6 @@ The helper currently supports this test website over HTTP/HTTPS. It rejects the 
 ## Verification
 
 18 automated checks passed, covering release timing, screenshot time labels and row grouping, form filling, conflict/retry/success, stopping, profile import and extension messaging. Tests live separately in the parent project's `Pruefung` folder. A visible run of the installed extension in Chrome has not yet been completed; no five-second booking guarantee is made.
+
+## Submitted details
+After a successful test, the confirmation shows the chosen date/time, country calling code, and all form values as they were when Confirm was clicked. These details stay in sessionStorage in that browser tab; they are not uploaded to GitHub or a server. Older confirmations require a new test to show these details.

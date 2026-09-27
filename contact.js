@@ -12,7 +12,14 @@
   if(submitted)return;
   if(!form.reportValidity()){status.textContent='Please complete all mandatory fields.';return;}
   submitted=true;confirm.disabled=true;
-  try{const current=BookingTest.read();if(!current)throw Error('Test session missing.');const outcome=BookingTest.commit(current);BookingTest.save(current);location.href=outcome==='success'?'Success.html':'ErrorPage.html';}
+  try{
+   const current=BookingTest.read();if(!current)throw Error('Test session missing.');
+   const dial=byId('dialCode');
+   const submittedFields=[{label:'Country calling code',value:dial.selectedOptions[0].textContent},...fields.map(([id,label])=>({label,value:byId(id).value}))];
+   const outcome=BookingTest.commit(current);
+   if(outcome==='success')current.receipt.submittedFields=submittedFields;
+   BookingTest.save(current);location.href=outcome==='success'?'Success.html':'ErrorPage.html';
+  }
   catch{status.textContent='An unexpected error occurred. Booking status is unknown. Please check before trying again.';}
  });
 })();

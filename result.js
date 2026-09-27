@@ -5,6 +5,10 @@
   if(!state?.receipt){byId('missing-result').hidden=false;return;}
   const receipt=state.receipt;byId('booking-success').hidden=false;
   byId('booked-time').textContent=BookingTest.dateLabel(receipt.date)+' at '+receipt.time;
+  const details=byId('submitted-details');
+  if(receipt.submittedFields){
+   for(const field of receipt.submittedFields){const term=document.createElement('dt'),value=document.createElement('dd');term.textContent=field.label;value.textContent=field.value||'—';details.append(term,value);}
+  }else{byId('details-note').textContent='This older booking has no saved form details. Start a new test to see the submitted values.';}
   byId('metrics').textContent=receipt.attempts+' Versuch(e) · Freigabe bis Bestätigung: '+((receipt.confirmedAt-state.config.releaseAt)/1000).toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' Sekunden.';return;
  }
  if(state?.receipt){location.replace('Success.html');return;}

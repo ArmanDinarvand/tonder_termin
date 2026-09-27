@@ -51,3 +51,5 @@ Das Website-Repository mit dem Hosting-Dienst verbinden. Liegen die Dateien dire
 Nach Veröffentlichung zuerst `/Settings.html` im selben Chrome-Profil öffnen, die Freigabe speichern und danach `/index.html` in einem zweiten Tab öffnen. Die Chrome-Erweiterung arbeitet in diesem zweiten Tab. Einstellungen werden nur innerhalb derselben Website und desselben Browserprofils geteilt.
 
 18 automatisierte Prüfungen bestanden. Die Veröffentlichung und ein sichtbarer Test der installierten Chrome-Erweiterung sind von diesen Prüfungen getrennte Schritte.
+## Bestätigte Angaben
+Nach einer erfolgreichen Testbuchung erscheinen Datum, Uhrzeit, ausgewählte Telefonvorwahl und alle Formularwerte zum Zeitpunkt des Confirm-Klicks. Diese Angaben bleiben im Sitzungsspeicher dieses Browser-Tabs und werden nicht zu GitHub oder einem Server übertragen. Für alte Bestätigungen bitte einen neuen Test starten.
